@@ -14,6 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:api')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+// Perbaikan Api-Mentors By Tegar
+Route::get('mentors', 'MentorController@index');
+Route::get('mentors/{id}', 'MentorController@show');
+Route::post('mentors', 'MentorController@create');
+Route::put('mentors/{id}', 'MentorController@update');
+Route::delete('mentors/{id}', 'MentorController@destroy');
+
+
+// Api-Course
+Route::post('courses', 'CourseController@create');
