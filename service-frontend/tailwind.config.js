@@ -112,6 +112,7 @@ module.exports = {
     divideWidth: theme => theme('borderWidth'),
     fill: {
       current: 'currentColor',
+      ...colors,
     },
     flex: {
       '1': '1 1 0%',
@@ -128,23 +129,16 @@ module.exports = {
       default: '1',
     },
     fontFamily: {
-      sans: [
-        'system-ui',
-        '-apple-system',
-        'BlinkMacSystemFont',
-        '"Segoe UI"',
-        'Roboto',
-        '"Helvetica Neue"',
-        'Arial',
-        '"Noto Sans"',
-        'sans-serif',
-        '"Apple Color Emoji"',
-        '"Segoe UI Emoji"',
-        '"Segoe UI Symbol"',
-        '"Noto Color Emoji"',
+      sans: ["Poppins"],
+      serif: ["Georgia", "Cambria", '"Times New Roman"', "Times", "serif"],
+      mono: [
+        "Menlo",
+        "Monaco",
+        "Consolas",
+        '"Liberation Mono"',
+        '"Courier New"',
+        "monospace",
       ],
-      serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
-      mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
     },
     fontSize: {
       xs: '0.75rem',

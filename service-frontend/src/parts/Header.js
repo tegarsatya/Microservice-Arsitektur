@@ -1,4 +1,5 @@
 import React from "react";
+
 import propTypes from "prop-types";
 
 import {useRouter} from "next/router";
@@ -9,15 +10,6 @@ import Logo from "public/images/logo.svg";
 
 
 export default function Header({onLight}) {
-//   const [User, setUser] = useState(() => null);
-//   useEffect(() => {
-//     const userCookies =
-//       decodeURIComponent(window.document.cookie)
-//         ?.split(";")
-//         ?.find?.((item) => item.indexOf("BWAMICRO:user") > -1)
-//         ?.split("=")[1] ?? null;
-//     setUser(userCookies ? JSON.parse(userCookies) : null);
-//   }, []);
 
   const linkColor = onLight ? "text-gray-900" : "text-white";
 
@@ -84,12 +76,38 @@ export default function Header({onLight}) {
           </Link>
         </li>
         <li>
+          <Link href="/">
+            <a
+              className={[
+                linkColor,
+                "text-white hover:text-teal-500 text-lg px-6 py-3 font-medium",
+              ].join(" ")}
+            >
+              Course
+            </a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/">
+            <a
+              className={[
+                linkColor,
+                "text-white hover:text-teal-500 text-lg px-6 py-3 font-medium",
+              ].join(" ")}
+            >
+              Search Job
+            </a>
+          </Link>
+        </li>
+        <li>
             <a
               target="_blank"
               rel="noopener noereferrer"
               href={linkCTA}
-              className="hover:bg-indigo-800 transition-all duration-200 text-white hover:text-teal-500 text-lg px-6 py-3 font-medium ml-6 inline-flex items-center"
-            ></a>
+            className="bg-indigo-700 hover:bg-indigo-800 transition-all duration-200 text-white hover:text-teal-500 text-lg px-6 py-3 font-medium ml-6"
+            >
+              {textCTA}
+            </a>
         </li>
       </ul>
     </header>
