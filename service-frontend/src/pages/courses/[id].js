@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
 import Head from "next/head";
-import Link from "next/link";
 import Youtube from "react-youtube";
 
 import { CSSTransition } from "react-transition-group";
@@ -22,7 +21,7 @@ import HappyStudent from "src/parts/Details/HappyStudent";
 
 import Footer from "src/parts/Footer";
 
-
+import formatThousand from "src/helpers/formatThoushand";
 
 function DetailsCourse({ data }) {
   console.log(data);
