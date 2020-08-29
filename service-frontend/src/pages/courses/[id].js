@@ -24,7 +24,7 @@ import Footer from "src/parts/Footer";
 import formatThousand from "src/helpers/formatThoushand";
 
 function DetailsCourse({ data }) {
-  console.log(data);
+  // console.log(data);
 
   const footer = useRef(null);
 
