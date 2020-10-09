@@ -15,7 +15,7 @@ function getUser($userId)
         return [
             'status' => 'error',
             'http_code' => 500,
-            'message' => 'service user unavailable'
+            'message' => 'Oops !! service user unavailable'
         ];
     }
 }
@@ -41,7 +41,7 @@ function getUserByIds($userIds = [])
         return [
             'status' => 'error',
             'http_code' => 500,
-            'message' => 'service user unavailable'
+            'message' => 'oops !! service user unavailable'
         ];
     }
 }

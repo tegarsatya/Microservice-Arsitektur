@@ -31,7 +31,7 @@ class LessonController extends Controller
         if (!$lesson) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'lesson not found'
+                'message' => 'Oopss... lesson not found'
             ], 404);
         }
 
@@ -64,7 +64,7 @@ class LessonController extends Controller
         if (!$chapter) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'chapter not found'
+                'message' => 'Oopss... chapter not found'
             ]);
         }
 
@@ -97,7 +97,7 @@ class LessonController extends Controller
         if (!$lesson) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'lesson not found'
+                'message' => 'Oopss... lesson not found'
             ], 404);
         }
 
@@ -107,7 +107,7 @@ class LessonController extends Controller
             if (!$chapter) {
                 return response()->json([
                     'status' => 'error',
-                    'message' => 'chapter not found'
+                    'message' => 'Oopss... chapter not found'
                 ]);
             }
         }
@@ -126,7 +126,7 @@ class LessonController extends Controller
         if (!$lesson) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'lesson not found'
+                'message' => 'Oopss... lesson not found'
             ]);
         }
 

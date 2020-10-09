@@ -10,7 +10,7 @@ module.exports = async(req, res) => {
     if (!user) {
         return res.status(404).json({
             status: 'error',
-            message: 'user not found'
+            message: 'Oopss... user not found'
         });
     }
 

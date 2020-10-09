@@ -9,7 +9,8 @@ module.exports = async(req, res) => {
     if (!token) {
         return res.status(400).json({
             status: 'error',
-            message: 'invalid token'
+            message: 'Oopss... invalid token'
+
         });
     }
 

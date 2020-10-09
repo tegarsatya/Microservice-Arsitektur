@@ -44,7 +44,7 @@ class CourseController extends Controller
         if (!$course) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'course not found'
+                'message' => 'Oopss... course not found'
             ]);
         }
 
@@ -79,15 +79,15 @@ class CourseController extends Controller
     public function create(Request $request)
     {
         $rules = [
-            'name' => 'required|string',
-            'certificate' => 'required|boolean',
-            'thumbnail' => 'string|url',
-            'type' => 'required|in:free,premium',
-            'status' => 'required|in:draft,published',
-            'price' => 'integer',
-            'level' => 'required|in:all-level,beginner,intermediate,advance',
-            'mentor_id' => 'required|integer',
-            'description' => 'string'
+            'name'           => 'required|string',
+            'certificate'    => 'required|boolean',
+            'thumbnail'      => 'string|url',
+            'type'           => 'required|in:free,premium',
+            'status'         => 'required|in:draft,published',
+            'price'          => 'integer',
+            'level'          => 'required|in:all-level,beginner,intermediate,advance',
+            'mentor_id'      => 'required|integer',
+            'description'    => 'string'
         ];
 
         $data = $request->all();
@@ -106,7 +106,7 @@ class CourseController extends Controller
         if (!$mentor) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'mentor not found'
+                'message' => 'Oopss... mentor not found'
             ], 404);
         }
 
@@ -146,7 +146,7 @@ class CourseController extends Controller
         if (!$course) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'course not found'
+                'message' => 'Oopss... course not found'
             ], 404);
         }
 
@@ -156,7 +156,7 @@ class CourseController extends Controller
             if (!$mentor) {
                 return response()->json([
                     'status' => 'error',
-                    'message' => 'mentor not found'
+                    'message' => 'Oopss... mentor not found'
                 ], 404);
             }
         }
@@ -177,7 +177,7 @@ class CourseController extends Controller
         if (!$course) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'course not found'
+                'message' => 'Oopss... course not found'
             ]);
         }
 

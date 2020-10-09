@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
     const image = req.body.image;
 
     if (!isBase64(image, { mimeRequired: true })) {
-        return res.status(400).json({ status: 'error', message: 'invalid base64' });
+        return res.status(400).json({ status: 'error', message: 'Oopss... invalid Software base64' });
     }
 
     base64Img.img(image, './public/images', Date.now(), async(err, filepath) => {
@@ -58,7 +58,7 @@ router.delete('/:id', async(req, res) => {
     const media = await Media.findByPk(id);
 
     if (!media) {
-        return res.status(404).json({ status: 'error', message: 'media not found' });
+        return res.status(404).json({ status: 'error', message: 'Oopss... media not found' });
     }
 
     fs.unlink(`./public/${media.image}`, async(err) => {

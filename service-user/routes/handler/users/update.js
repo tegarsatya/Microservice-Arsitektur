@@ -25,7 +25,7 @@ module.exports = async(req, res) => {
     if (!user) {
         return res.status(404).json({
             status: 'error',
-            message: 'user not found'
+            message: 'Oopss... user not found'
         });
     }
 
@@ -38,7 +38,7 @@ module.exports = async(req, res) => {
         if (checkEmail && email !== user.email) {
             return res.status(409).json({
                 status: 'error',
-                message: 'email already exist'
+                message: 'Oopss... email already exist'
             })
         }
     }

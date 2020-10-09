@@ -10,7 +10,7 @@ module.exports = async(req, res) => {
     if (!user) {
         return res.status(404).json({
             status: 'error',
-            message: 'user not found'
+            message: 'Oopss... user not found'
         });
     }
 
@@ -20,6 +20,6 @@ module.exports = async(req, res) => {
 
     return res.json({
         status: 'success',
-        message: 'refresh token deleted'
+        message: 'Oopss... refresh token deleted'
     });
 }

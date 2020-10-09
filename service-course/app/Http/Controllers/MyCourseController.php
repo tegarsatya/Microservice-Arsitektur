@@ -26,9 +26,10 @@ class MyCourseController extends Controller
 
     public function create(Request $request)
     {
+
         $rules = [
             'course_id' => 'required|integer',
-            'user_id' => 'required|integer'
+            'user_id'   => 'required|integer'
         ];
 
         $data = $request->all();
@@ -37,8 +38,10 @@ class MyCourseController extends Controller
 
         if ($validator->fails()) {
             return response()->json([
-                'status' => 'error',
+
+                'status'  => 'error',
                 'message' => $validator->errors()
+
             ], 400);
         }
 
@@ -47,8 +50,10 @@ class MyCourseController extends Controller
 
         if (!$course) {
             return response()->json([
-                'status' => 'error',
-                'message' => 'course not found'
+
+                'status'  => 'error',
+                'message' => 'Oopss... course not found'
+
             ], 404);
         }
 
@@ -56,9 +61,12 @@ class MyCourseController extends Controller
         $user = getUser($userId);
 
         if ($user['status'] === 'error') {
+
             return response()->json([
-                'status' => $user['status'],
+
+                'status'  => $user['status'],
                 'message' => $user['message']
+
             ], $user['http_code']);
         }
 
@@ -68,8 +76,10 @@ class MyCourseController extends Controller
 
         if ($isExistMyCourse) {
             return response()->json([
-                'status' => 'error',
-                'message' => 'user already take this course'
+
+                'status'  => 'error',
+                'message' => 'Oopss... user already take this course'
+
             ], 409);
         }
 

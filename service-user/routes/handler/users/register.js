@@ -20,17 +20,20 @@ module.exports = async(req, res) => {
         });
     }
 
+    // Pengecekan email di database
     const user = await User.findOne({
         where: { email: req.body.email }
     });
 
+    // kalau sudah terdaftar akan di redirect
     if (user) {
         return res.status(409).json({
             status: 'error',
-            message: 'email already exist'
+            message: 'Oopss... email already exist'
         });
     }
 
+    // Hash Password 
     const password = await bcrypt.hash(req.body.password, 10);
 
     const data = {
@@ -41,8 +44,8 @@ module.exports = async(req, res) => {
         role: 'student'
     };
 
+    // proses berakhir, data tersimpan ke server
     const createdUser = await User.create(data);
-
     return res.json({
         status: 'success',
         data: {

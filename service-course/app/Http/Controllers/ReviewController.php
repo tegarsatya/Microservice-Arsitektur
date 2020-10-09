@@ -33,7 +33,7 @@ class ReviewController extends Controller
         if (!$course) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'course not found'
+                'message' => 'Oopss... course not found'
             ]);
         }
 
@@ -54,7 +54,7 @@ class ReviewController extends Controller
         if ($isExistReview) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'review already exist'
+                'message' => 'Oopss... review already exist'
             ], 409);
         }
 
@@ -87,7 +87,7 @@ class ReviewController extends Controller
         if (!$review) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'review not found'
+                'message' => 'Oopss... review not found'
             ], 404);
         }
 
@@ -107,7 +107,7 @@ class ReviewController extends Controller
         if (!$review) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'review not found'
+                'message' => 'Oopss... review not found'
             ], 404);
         }
 

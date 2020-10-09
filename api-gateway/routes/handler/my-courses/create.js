@@ -11,17 +11,25 @@ module.exports = async(req, res) => {
         const courseId = req.body.course_id;
 
         const myCourse = await api.post('/api/my-courses', {
+
             user_id: userId,
             course_id: courseId
+
         });
         return res.json(myCourse.data);
     } catch (error) {
 
+        // console.log(error)
+
         if (error.code === 'ECONNREFUSED') {
-            return res.status(500).json({ status: 'error', message: 'service unavailable' });
+            return res.status(500).json({ status: 'error', message: 'Oops.....  service unavailable ' });
         }
 
         const { status, data } = error.response;
+
         return res.status(status).json(data);
+        // console.log(error)
     }
 }
+
+// api crase tiba-tiba

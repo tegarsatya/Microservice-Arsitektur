@@ -7,7 +7,7 @@ function App() {
         <div className = "container mx-auto">
             <h1 className="text-6xl"></h1>
             <div>
-                
+ 
             </div>
         </div>   
     )

@@ -31,7 +31,7 @@ class ImageCourseController extends Controller
         if (!$course) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'course not found'
+                'message' => 'Oopss... course not found'
             ], 404);
         }
 
@@ -49,7 +49,7 @@ class ImageCourseController extends Controller
         if (!$imageCourse) {
             return response()->json([
                 'status' => 'error',
-                'message' => 'image course not found'
+                'message' => 'Oopss... image course not found'
             ], 404);
         }
 

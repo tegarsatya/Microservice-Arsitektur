@@ -17,7 +17,7 @@ module.exports = async(req, res) => {
         if (!refreshToken || !email) {
             return res.status(400).json({
                 status: 'error',
-                message: 'invalid token'
+                message: 'Oops..... invalid token'
             });
         };
 
@@ -34,7 +34,7 @@ module.exports = async(req, res) => {
             if (email !== decoded.data.email) {
                 return res.status(400).json({
                     status: 'error',
-                    message: 'email is not valid'
+                    message: 'Oops..... email is not valid'
                 });
             }
 
@@ -50,7 +50,7 @@ module.exports = async(req, res) => {
     } catch (error) {
 
         if (error.code === 'ECONNREFUSED') {
-            return res.status(500).json({ status: 'error', message: 'service unavailable' });
+            return res.status(500).json({ status: 'error', message: 'Oops.....  service unavailable' });
         }
 
         const { status, data } = error.response;
