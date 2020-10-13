@@ -1,8 +1,8 @@
-import React, {useState, useEffect, useRef} from "react";
+import React, { useState, useEffect, useRef } from "react";
 import propTypes from "prop-types";
-import {createPortal} from "react-dom";
+import { createPortal } from "react-dom";
 
-import {CSSTransition} from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 
 export default function Modal(props) {
   const [Ready, setReady] = useState(() => false);

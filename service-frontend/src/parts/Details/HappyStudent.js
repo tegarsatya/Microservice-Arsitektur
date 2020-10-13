@@ -2,7 +2,7 @@ import React from "react";
 
 import Star from "src/components/Star";
 
-export default function HappyStudent({data}) {
+export default function HappyStudent({ data }) {
   return (
     <div className="mt-8">
       <Star value={data?.rating ?? 0} width={26} height={26}></Star>
@@ -27,4 +27,3 @@ export default function HappyStudent({data}) {
     </div>
   );
 }
-

@@ -1,10 +1,10 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-import {CSSTransition} from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 
 import ArrowDown from "public/images/icon-arrow-down.svg";
 
-export default function Item({name, id, child, active, toggle, children}) {
+export default function Item({ name, id, child, active, toggle, children }) {
   const [Height, setHeight] = useState(() => 0);
 
   function calcHeight(e) {
@@ -31,7 +31,7 @@ export default function Item({name, id, child, active, toggle, children}) {
       </div>
       <div
         className="transition-all duration-500"
-        style={{height: active === id ? Height : 0}}
+        style={{ height: active === id ? Height : 0 }}
       >
         <CSSTransition
           in={active === id}

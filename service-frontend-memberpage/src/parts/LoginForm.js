@@ -105,7 +105,7 @@ function LoginForm({ history }) {
         </form>
       </div>
 
-      <div className="w-1/12 hidden sm:block"></div>
+      <div className="w-2/12 hidden sm:block"></div>
 
       <div className="w-5/12 hidden sm:block justify-end pt-24 pr-16">
         <div className="relative" style={{ width: 369, height: 440 }}>

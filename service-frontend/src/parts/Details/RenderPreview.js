@@ -2,10 +2,10 @@ import React from "react";
 
 import Youtube from "react-youtube";
 
-import Accordion, {IconLock, IconPlay, Item} from "src/components/Accordion";
+import Accordion, { IconLock, IconPlay, Item } from "src/components/Accordion";
 import Modal from "src/components/Modal";
 
-export default function RenderPreview({previews}) {
+export default function RenderPreview({ previews }) {
   return (
     <div className="accordion">
       <Accordion>
@@ -33,6 +33,7 @@ export default function RenderPreview({previews}) {
                         <Modal
                           content={(toggleModal) => (
                             <Youtube
+                              className="w-full"
                               videoId={child?.video}
                               id={child?.video}
                               opts={{
